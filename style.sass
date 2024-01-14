@@ -1,0 +1,525 @@
+* 
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+nav 
+    display: flex
+    padding: 0 10px 0 10px 
+    justify-items: center
+    align-items: center
+    justify-content: space-between
+    width: 100%
+    height: 10vh
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3)
+    @media screen and (max-width: 480px)
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        height: auto
+        
+
+    ul 
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        list-style: none
+        width: 100%
+        height: auto
+        gap: 25px
+        @media screen and (max-width: 480px)
+            margin-bottom: 10px
+            justify-content: center
+            align-items: center
+            gap: 10px
+
+        li 
+            display: flex
+            justify-content: center
+            align-items: center
+            width: auto
+            height: auto
+            margin: 0 10px 0 10px
+
+            a 
+                display: flex
+                justify-content: center
+                align-items: center
+                text-decoration: none
+                color: #3598DE 
+                font-size: 1.2rem
+                font-weight: 600
+                transition: all 0.3s ease-in-out
+
+                &:hover 
+                    color: #fff
+                    background-color: #3598DE
+                    border-radius: 5px
+                    padding: 5px 10px 5px 10px
+
+img 
+    display: flex
+    flex-shrink: 0
+    width: 100px
+    height: 100px
+    object-fit: contain
+
+
+.Accueil 
+    background: linear-gradient(rgba(180, 174, 174, 0.4), rgba(63, 62, 62, 0.5)), url(../img/poke_accueil.jpg) 
+    height: 90vh
+    background-size: cover
+    width: 100%
+    display: flex
+    align-items: center
+    
+        
+    
+    
+   
+    
+
+.contenant
+    display: flex
+    flex-direction: column
+    width: 100%
+    height: 100%  
+    margin-left: 8%
+    color: #fff 
+    justify-content: space-around 
+
+    @media screen and (max-width: 480px)
+        margin-left: 5%  
+        gap: 15px  
+        
+    
+
+
+
+.titre 
+    width: auto
+    height: auto
+    // background-image: conic-gradient(from var(--border-angle),#213,#112 50%,#213),conic-gradient(from var(--border-angle), transparent 20%, #08f, #f03)
+    // background-size: calc(100% - (var(--border-size) * 2))calc(100% - (var(--border-size) * 2)), cover
+    // background-position: center center
+    // background-repeat: no-repeat
+    // border: 8px solid transparent
+    // overflow: hidden
+    // animation: borderAnimation 0.5s infinite alternate
+    box-shadow: 0 0 0 2px transparent 
+    transition: box-shadow 0.3s ease
+    p 
+        font-size: 4.5em
+        font-weight: 600
+    // @keyframes borderAnimation
+    //     0%
+    //         border-image: linear-gradient(7deg, #ed22ff, #3498db) 1
+    //     100%
+    //        border-image: linear-gradient(0deg, #e74c3c, #77be05) 1 
+    &:hover
+        animation: borderAnimation 2s infinite
+
+    @keyframes borderAnimation 
+        0%, 100% 
+            box-shadow: 0 0 0 2px transparent
+        
+        50% 
+          box-shadow: 0 0 0 2px #e74c3c
+
+.description p 
+    width: 900px
+    font-size: 1.5rem    
+@media screen and (max-width: 1010px)
+    .description p 
+        width: auto
+@media screen and (max-width: 600px)
+    .titre p 
+        font-size: 3rem
+    .description p 
+        font-size: 1.2rem
+     
+    
+
+
+.btn_contenant
+    display: flex
+    flex-direction: column
+    gap: 25px 
+    width: 40%
+    @media screen and (max-width: 480px)
+        flex-direction: row
+
+    button 
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 100%
+        height: 50px
+        padding: 25px
+        border: none
+        border-radius: 5px
+        background-color: transparent
+        border: 6px solid #fff
+        color: #fff
+        font-size: 1.2rem
+        font-weight: 600
+        transition: all 0.3s ease-in-out
+        
+            
+
+        &:hover 
+            background-color: #fff
+            color: #3598DE
+            border: 6px solid #3598DE
+            cursor: pointer
+
+
+////////////////////////////////////////////// la page  produit //////////////////////////////////////////////
+
+.titre2 
+    margin: 50px
+    @media screen and (max-width: 495px)
+        margin: 20px 
+    p 
+        font-size: 2.5rem
+        font-weight: 600
+        color: #3598DE
+        margin-bottom: 20px
+        @media screen and (max-width: 495px)
+            font-size: 2rem
+
+.input 
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 25px
+
+    input 
+        width: 300px
+        height: 50px
+        border: 2px solid #3598DE
+        border-radius: 5px
+        padding: 0 10px 0 10px
+        font-size: 1.2rem
+        font-weight: 600
+        color: #3598DE
+        @media screen and (max-width: 495px)
+            width: 200px
+            height: 40px
+            font-size: 1rem
+            padding: 0 5px 0 5px
+    i 
+        color: #3598DE
+        font-size: 1.5rem
+        @media screen and (max-width: 495px)
+            font-size: 1rem
+
+            
+        
+
+
+.produits_contenant
+    display: flex
+    justify-content: center
+    width: 100%
+    height: auto
+    justify-items: center
+    align-items: center
+
+.produits 
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    width: 100%
+    height: auto
+    justify-content: center
+    align-items: center
+    gap: 25px
+    padding-top: 25px
+
+    @media screen and (max-width: 800px)
+        grid-template-columns: repeat(3, 1fr)
+    @media screen and (max-width: 560px)
+        grid-template-columns: repeat(2, 1fr)
+    @media screen and (max-width: 460px)
+        grid-template-columns: repeat(1, 1fr)
+
+
+
+    .un_produit
+        width: 100%
+        height: auto
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        background-color:  #fff
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px
+        border-radius: 5px
+        
+        transition: transform 1s ease
+        
+            
+           
+        
+        button
+            margin: 10px 0 10px 0
+            padding: 10px 25px 10px 25px 
+            background-color: #fff
+            border: 2px solid #3598DE
+            border-radius: 5px  
+
+            &:hover
+                background-color: #3598DE
+                color: #fff
+                cursor: pointer
+
+        &:nth-child(2n)
+            box-shadow: rgba(41, 41, 245, 0.2) 0px 7px 29px 0px
+        &:nth-child(2n+1)
+            box-shadow: rgba(227, 234, 34, 0.2) 0px 7px 29px 0px
+
+.scale 
+    transform: scale(2)
+
+//////////////////////////// pop up  ajouter au panier ////////////////////////////////////////////////
+
+
+.pop_up 
+    position: fixed
+    top: 0
+    display: none
+    justify-content: center
+    align-items: center
+    // ajouter le flou 
+    backdrop-filter: blur(20px)
+    width: 100%
+    height: 100% 
+
+    .pop_up_centrer
+        display: flex
+        justify-content: center
+        align-items: center
+        align-content: center
+        justify-items: center
+
+        flex-direction: column
+        width: 50%
+        height: 50%
+        background-color: #fff
+        border-radius: 15px
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px
+        border: 2px solid #3598DE
+        @media screen and (max-width: 800px)
+            width: 80%
+            height: auto
+
+        .pop_up_infos 
+            display: flex
+            align-items: center
+            width: 100%
+            height: 80%
+            justify-content: center
+            align-content: center
+            justify-items: center
+            align-content:  center
+            @media screen and (max-width: 800px)
+                flex-direction: column
+                
+
+            .pokemon 
+                width: 50%
+                display: flex
+                flex-direction: column
+                align-items: center
+                border-right: 2px solid #3598DE
+                @media screen and (max-width: 800px)
+                    border-right: none
+                    border-bottom: 2px solid #3598DE
+                    width: 100% 
+            .img_pop_up
+                width: 200px
+                height: 200px
+                object-fit: cover
+
+            h2 
+                font-size: 2.5rem
+            
+            .infos 
+                margin: 10px 0 0px 20px
+                color: #3598DE
+                font-size: 1.2rem 
+                display: flex
+                width: 50%
+                height: auto
+                flex-direction: column
+                gap: 10px 
+                justify-items: center
+                align-items: center
+                @media screen and (max-width: 800px)
+                    margin: 20px 0 20px 0
+                    width: 100%
+                
+                
+
+            
+        .btns
+            width: 100%
+            height: 20%
+            margin: 20px 0 10px 0 
+            display: flex
+            justify-content: space-around
+            align-items: center 
+            @media screen and (max-width: 800px)
+                flex-direction: column
+                gap: 10px
+                margin: 20px 0 20px 0 
+
+            button 
+                width: auto
+                height: 50px
+                border: none
+                border-radius: 5px
+                background-color: #fff
+                border: 2px solid #3598DE
+                color: #3598DE
+                font-size: 1rem
+                font-weight: 600
+                transition: all 0.3s ease-in-out
+                padding: 0 10px 0 10px
+
+                &:hover 
+                    background-color: #3598DE
+                    color: #fff
+                    cursor: pointer
+
+///////////////////////////// page panier ////////////////////////////////////////////////
+
+.panier_texte
+    display: flex
+    width: 100%
+    height: 10vh
+    border-bottom: 2px solid #3598DE
+    margin: 20px 0 0 0
+    padding:  0 0 0 20px
+
+    p
+            font-size: 3rem
+            font-weight: 600
+            color: #3598DE
+            margin-bottom: 20px
+
+.panier 
+    background-color:  rgb(53, 152, 222, 0.2)
+    width: 100%
+    height: auto 
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    margin-top: 10px
+
+    
+
+        
+
+
+    .mes_produits 
+        width: 50%
+        display: grid
+        height: auto
+        grid-template-columns: repeat(3, 1fr)
+        border-radius: 5px 5px 10% 10%
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px
+        background-color: #fff
+        position: relative
+        z-index: 1
+        @media screen and (max-width: 800px)
+            grid-template-columns: repeat(2, 1fr) 
+        @media screen and (max-width: 560px)
+            grid-template-columns: repeat(1, 1fr)
+            
+        
+        
+
+        .un_produitAuPanier 
+            border-radius: 12%
+            background-color: rgb(228, 208, 55, 0.1)
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px
+            width: auto
+            height: auto
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: column
+
+            @keyframes rotate 
+                0%
+                    transform: rotate(0deg)
+                50%
+                    transform: rotate(20deg)
+                100%
+                    transform: rotate(0deg) 
+                
+            
+                
+
+
+            .supprimer
+                display: block
+                margin-left: auto
+                background-color: transparent
+                border: none
+                color: #de3535
+
+                
+
+    .payer 
+        width: auto 
+        height: auto
+        margin: 20px 0 20px 0
+        background-color: #3598DE
+        border-style: none
+        font-size: 2em 
+        font-weight: 600
+        padding: 10px 25px 10px 25px
+        border-radius: 10px
+        color: #fff
+
+.total 
+    margin: 20px 0 20px 0
+    color: #3598DE
+    font-size: 1.5rem
+    font-weight: 600
+    border: 2px solid #3598DE
+    padding: 10px 25px 10px 25px
+
+.rotation
+    animation: rotate 0.5s 
+
+
+
+/////////////////////////// modal panier ////////////////////////////////////////////////
+
+.fond_flou 
+    position: fixed
+    backdrop-filter: blur(20px)
+    width: 100%
+    height: 100%
+    z-index: 2
+    display: none
+    justify-content: center
+    align-items: center
+
+    .modal_infos 
+        width: 50%
+        height: 50%
+        background-color: #fff
+        border-radius: 15px
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px
+        display: flex
+        justify-content: center
+        align-items: center
+
+    
+
+    
